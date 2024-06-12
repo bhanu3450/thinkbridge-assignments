@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passport Application - Payment</title>
+    <!-- Bootswatch Journal Theme -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.3.0/journal/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card p-4 shadow-sm bg-white">
+            <h1 class="text-center">Payment</h1>
+            <form action="#" method="POST">
+                <div class="mb-3">
+                    <label for="cardholder-name" class="form-label">Cardholder Name</label>
+                    <input type="text" id="cardholder-name" name="cardholder-name" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="card-number" class="form-label">Card Number</label>
+                    <input type="text" id="card-number" name="card-number" class="form-control" required pattern="\d{16}" title="Please enter a valid 16-digit card number">
+                </div>
+                <div class="mb-3">
+                    <label for="expiry-date" class="form-label">Expiry Date</label>
+                    <input type="text" id="expiry-date" name="expiry-date" class="form-control" required placeholder="MM/YY" pattern="\d{2}/\d{2}" title="Please enter a valid expiry date in MM/YY format">
+                </div>
+                <div class="mb-3">
+                    <label for="cvv" class="form-label">CVV</label>
+                    <input type="password" id="cvv" name="cvv" class="form-control" required pattern="\d{3}" title="Please enter a valid 3-digit CVV">
+                </div>
+                <div class="mb-3">
+                    <label for="payment-method" class="form-label">Payment Method</label>
+                    <select id="payment-method" name="payment-method" class="form-select" required>
+                        <option value="credit-card">Credit Card</option>
+                        <option value="debit-card">Debit Card</option>
+                        <option value="net-banking">Net Banking</option>
+                    </select>
+                </div>
+                <div class="summary p-3 bg-light border rounded">
+                    <p><strong>Amount to Pay:</strong> ₹1500.00</p>
+                    <p><strong>Service Charge:</strong> ₹50.00</p>
+                    <p><strong>Total Amount:</strong> ₹1550.00</p>
+                </div>
+                <button type="submit" class="btn btn-primary w-100 mt-3">Make Payment</button>
+            </form>
+        </div>
+    </div>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

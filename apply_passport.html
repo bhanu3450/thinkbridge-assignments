@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for Passport</title>
+    <!-- Bootswatch Journal Theme -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.3.0/journal/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Passport Application Form</h1>
+        <form id="passportForm">
+            <!-- Section 1: Service Required -->
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h2>Service Required</h2>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label for="serviceRequired" class="form-label">Applying for:</label>
+                        <select id="serviceRequired" name="serviceRequired" class="form-select" required>
+                            <option value="Fresh Passport">Fresh Passport</option>
+                            <option value="Re-issue of Passport">Re-issue of Passport</option>
+                        </select>
+                    </div>
+                    <label>If re-issue, specify reason(s):</label>
+                    <div class="form-check">
+                        <input type="checkbox" id="validityExpire" name="reissueReason" value="Validity Expired within 3 years/ Due to Expire" class="form-check-input">
+                        <label for="validityExpire" class="form-check-label">Validity Expired within 3 years/ Due to Expire</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" id="pagesExhausted" name="reissueReason" value="Exhaustion of Pages" class="form-check-input">
+                        <label for="pagesExhausted" class="form-check-label">Exhaustion of Pages</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" id="lostPassport" name="reissueReason" value="Lost Passport" class="form-check-input">
+                        <label for="lostPassport" class="form-check-label">Lost Passport</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" id="damagedPassport" name="reissueReason" value="Damaged Passport" class="form-check-input">
+                        <label for="damagedPassport" class="form-check-label">Damaged Passport</label>
+                    </div>
+                    <div class="mb-3 mt-3">
+                        <label for="typeApplication" class="form-label">Type of Application:</label>
+                        <select id="typeApplication" name="typeApplication" class="form-select" required>
+                            <option value="Normal">Normal</option>
+                            <option value="Tatkaal">Tatkaal</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="bookletType" class="form-label">Type of Passport Booklet:</label>
+                        <select id="bookletType" name="bookletType" class="form-select" required>
+                            <option value="36 Pages">36 Pages</option>
+                            <option value="60 Pages">60 Pages</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="validityRequired" class="form-label">Validity Required:</label>
+                        <select id="validityRequired" name="validityRequired" class="form-select" required>
+                            <option value="10 Years">10 Years</option>
+                            <option value="Up to age 18">Up to age 18</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 2: Applicant Details -->
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h2>Applicant Details</h2>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label for="givenName" class="form-label">Given Name:</label>
+                        <input type="text" id="givenName" name="givenName" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="surname" class="form-label">Surname:</label>
+                        <input type="text" id="surname" name="surname" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="otherNames" class="form-label">Are you known by any other names (aliases)?</label>
+                        <select id="otherNames" name="otherNames" class="form-select" required>
+                            <option value="No">No</option>
+                            <option value="Yes">Yes</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="nameChanged" class="form-label">Have you ever changed your name?</label>
+                        <select id="nameChanged" name="nameChanged" class="form-select" required>
+                            <option value="No">No</option>
+                            <option value="Yes">Yes</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="dob" class="form-label">Date of Birth (DD-MM-YYYY):</label>
+                        <input type="date" id="dob" name="dob" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="placeOfBirth" class="form-label">Place of Birth:</label>
+                        <input type="text" id="placeOfBirth" name="placeOfBirth" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="district" class="form-label">District:</label>
+                        <input type="text" id="district" name="district" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="state" class="form-label">State/ UT:</label>
+                        <input type="text" id="state" name="state" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="country" class="form-label">Country:</label>
+                        <input type="text" id="country" name="country" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="gender" class="form-label">Gender:</label>
+                        <select id="gender" name="gender" class="form-select" required>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Transgender">Transgender</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="maritalStatus" class="form-label">Marital Status:</label>
+                        <select id="maritalStatus" name="maritalStatus" class="form-select" required>
+                            <option value="Single">Single</option>
+                            <option value="Married">Married</option>
+                            <option value="Divorced">Divorced</option>
+                            <option value="Widow/Widower">Widow/Widower</option>
+                            <option value="Separated">Separated</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="citizenship" class="form-label">Citizenship of India by:</label>
+                        <select id="citizenship" name="citizenship" class="form-select" required>
+                            <option value="Birth">Birth</option>
+                            <option value="Descent">Descent</option>
+                            <option value="Registration/Naturalization">Registration/Naturalization</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="pan" class="form-label">PAN (If available):</label>
+                        <input type="text" id="pan" name="pan" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="voterId" class="form-label">Voter ID (If available):</label>
+                        <input type="text" id="voterId" name="voterId" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="employment" class="form-label">Employment Type:</label>
+                        <select id="employment" name="employment" class="form-select" required>
+                            <option value="PSU">PSU</option>
+                            <option value="Government">Government</option>
+                            <option value="Statutory Body">Statutory Body</option>
+                            <option value="Retired Government Servant">Retired Government Servant</option>
+                            <option value="Self Employed">Self Employed</option>
+                            <option value="Private">Private</option>
+                            <option value="Homemaker">Homemaker</option>
+                            <option value="Not Employed">Not Employed</option>
+                            <option value="Retired-Private Service">Retired-Private Service</option>
+                            <option value="Student">Student</option>
+                            <option value="Others">Others</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="orgName" class="form-label">If employed in Government/ Statutory Body/ PSU, specify organization name:</label>
+                        <input type="text" id="orgName" name="orgName" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="parentGovtServant" class="form-label">Is either of your parent (in case of minor)/ spouse, a government servant?</label>
+                        <select id="parentGovtServant" name="parentGovtServant" class="form-select" required>
+                            <option value="No">No</option>
+                            <option value="Yes">Yes</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="education" class="form-label">Educational Qualification:</label>
+                        <select id="education" name="education" class="form-select" required>
+                            <option value="7th pass or less">7th pass or less</option>
+                            <option value="Between 8th and 9th Standard">Between 8th and 9th Standard</option>
+                            <option value="10th pass and above">10th pass and above</option>
+                            <option value="Graduate and above">Graduate and above</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="nonEcr" class="form-label">Are you eligible for Non-ECR category?</label>
+                        <select id="nonEcr" name="nonEcr" class="form-select" required>
+                            <option value="No">No</option>
+                            <option value="Yes">Yes</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 3: Family Details -->
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h2>Family Details</h2>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label for="fatherName" class="form-label">Father's Given Name:</label>
+                        <input type="text" id="fatherName" name="fatherName" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="fatherSurname" class="form-label">Father's Surname:</label>
+                        <input type="text" id="fatherSurname" name="fatherSurname" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="motherName" class="form-label">Mother's Given Name:</label>
+                        <input type="text" id="motherName" name="motherName" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="motherSurname" class="form-label">Mother's Surname:</label>
+                        <input type="text" id="motherSurname" name="motherSurname" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="legalGuardianName" class="form-label">Legal Guardian's Given Name (if applicable):</label>
+                        <input type="text" id="legalGuardianName" name="legalGuardianName" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="legalGuardianSurname" class="form-label">Legal Guardian's Surname:</label>
+                        <input type="text" id="legalGuardianSurname" name="legalGuardianSurname" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="spouseName" class="form-label">Spouse's Given Name (if married):</label>
+                        <input type="text" id="spouseName" name="spouseName" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="spouseSurname" class="form-label">Spouse's Surname:</label>
+                        <input type="text" id="spouseSurname" name="spouseSurname" class="form-control">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 4: Present Residential Address -->
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h2>Present Residential Address</h2>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label for="houseNo" class="form-label">House No. and Street Name:</label>
+                        <input type="text" id="houseNo" name="houseNo" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="village" class="form-label">Village/ Town/ City:</label>
+                        <input type="text" id="village" name="village" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="districtPresent" class="form-label">District:</label>
+                        <input type="text" id="districtPresent" name="districtPresent" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="statePresent" class="form-label">State/ UT:</label>
+                        <input type="text" id="statePresent" name="statePresent" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="pinCode" class="form-label">Pin Code:</label>
+                        <input type="text" id="pinCode" name="pinCode" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="mobile" class="form-label">Mobile Number:</label>
+                        <input type="text" id="mobile" name="mobile" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email ID:</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 5: Emergency Contact -->
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h2>Emergency Contact</h2>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label for="emergencyName" class="form-label">Name and Address:</label>
+                        <textarea id="emergencyName" name="emergencyName" class="form-control" rows="3" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="emergencyPhone" class="form-label">Phone Number:</label>
+                        <input type="text" id="emergencyPhone" name="emergencyPhone" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="emergencyEmail" class="form-label">Email:</label>
+                        <input type="email" id="emergencyEmail" name="emergencyEmail" class="form-control">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 6: Previous Passport/ Application Details -->
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h2>Previous Passport/ Application Details</h2>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label for="prevPassportNum" class="form-label">Previous Passport Number:</label>
+                        <input type="text" id="prevPassportNum" name="prevPassportNum" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="prevIssueDate" class="form-label">Date of Issue:</label>
+                        <input type="date" id="prevIssueDate" name="prevIssueDate" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="prevExpiryDate" class="form-label">Date of Expiry:</label>
+                        <input type="date" id="prevExpiryDate" name="prevExpiryDate" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="prevIssuePlace" class="form-label">Place of Issue:</label>
+                        <input type="text" id="prevIssuePlace" name="prevIssuePlace" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="prevFileNum" class="form-label">File Number:</label>
+                        <input type="text" id="prevFileNum" name="prevFileNum" class="form-control">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 7: Self-Declaration -->
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h2>Self-Declaration</h2>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label for="selfDeclaration" class="form-label">I hereby declare that:</label>
+                        <textarea id="selfDeclaration" name="selfDeclaration" class="form-control" rows="3" required></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-navigation text-center">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
